@@ -172,9 +172,9 @@ function checkGreenPass(greenPass) {
     }
     console.log(dataFineValidita.toDateString());
     if ((dataFineValidita.getTime() - new Date().getTime()) < 0) {
-        alertTimeout('Certificato NON VALIDO', 1000);
+        alertTimeout('Certificato NON VALIDO', 2500);
         return false;
     }
-    alertTimeout('Certificato VALIDO fine_validità : '+dataFineValidita.toDateString(), 1000);
+    alertTimeout('Certificato VALIDO fine_validità : '+dataFineValidita.toDateString(), 2500);
     return true;
 }
