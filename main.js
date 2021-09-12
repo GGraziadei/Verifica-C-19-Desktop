@@ -17,8 +17,11 @@ $(document).ready(() => {
 async function getGreenPass(qrCode) {
     var result;
     var data = { qrCodeStr: qrCode };
+    var proxy   = "https://cors-anywhere.herokuapp.com/";
+    var url     = "https://verifica-c19.inclouditalia.it/";
+
     await $.ajax({
-        url: "https://verifica-c19.inclouditalia.it/",
+        url: proxy + url,
         type: "POST",
         data: data,
         dataType: "json",
